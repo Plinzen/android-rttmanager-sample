@@ -6,6 +6,7 @@ The sample consists of two screens:
 
 ## WiFi Selection screen
 The WiFi selection screen shows the general capabilities of the smartphone and after clicking on the search FAB button a WiFi scan is performed. Available WiFi's are listed and for each detected WiFi it is noticed whether the network supports RTT or not.
+
 ![WiFi selection](images/wifi.png)
 
 ## Ranging screen
@@ -20,4 +21,4 @@ Via the buttons "Start Ranging" and "Stop Ranging" RTT measurements can be perfo
 
 ## Notes
 * Your smartphone has to support the IEEE 802.11mc standard by hardware. (e.g. has Qualcomm Snapdragon 820 CPU)
-* Your Access Point used for RTT ranging support the IEEE 802.11mc standard. 
+* Your Access Point used for RTT ranging support the IEEE 802.11mc standard.
