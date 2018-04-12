@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">RTT Tool</string>
+    <string name="action_settings">Settings</string>
+    <string name="list_of_available_wifi_networks">List of available Wifi Networks</string>
+    <string name="capabilities_of_rttmanager">Capabilities of RttManager</string>
+    <string name="android_wifi_supports_rtt">Android Wifi supports RTT</string>
+    <string name="enable_wifi">Wifi is disabled. Please enable it.</string>
+    <string name="ssid">SSID:</string>
+    <string name="supports_802_11mc">Supports 802.11mc:</string>
+    <string name="click_on_the_search_button_to_scan_for_wifi_networks">Click on the search button to scan for WiFi networks.</string>
+    <string name="permission_location_description">The app needs access to your location to perform a WiFi-Scan.</string>
+    <string name="location_service_disabled">GPS-base Location services have to be enabled to perform a WiFi scan.</string>
+    <string name="version_info_app">Version App: %1$s (%2$d)</string>
+    <string name="rtt_available">RTT is available: %1$b</string>
+    <string name="selected_activity_title">Wifi %1$s</string>
+
+    <!-- Button Text -->
+    <string name="stop_ranging">Stop Ranging</string>
+    <string name="start_ranging">Start Ranging</string>
+
+    <!-- log String -->
+    <string name="log">%1$d RSSI: %2$d Distance: %3$d mm\n%4$s</string>
+
+</resources>
