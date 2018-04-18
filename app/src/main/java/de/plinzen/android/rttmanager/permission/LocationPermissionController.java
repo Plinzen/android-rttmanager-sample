@@ -10,7 +10,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
 
-import de.continental.android.rttmanager.R;
+import de.plinzen.android.rttmanager.R;
 
 public class LocationPermissionController {
 

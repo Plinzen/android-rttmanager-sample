@@ -27,8 +27,8 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import de.continental.android.rttmanager.BuildConfig;
-import de.continental.android.rttmanager.R;
+import de.plinzen.android.rttmanager.BuildConfig;
+import de.plinzen.android.rttmanager.R;
 import de.plinzen.android.rttmanager.permission.LocationPermissionController;
 import de.plinzen.android.rttmanager.ranging.SelectedActivity;
 import timber.log.Timber;
