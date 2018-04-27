@@ -21,4 +21,4 @@ Via the buttons "Start Ranging" and "Stop Ranging" RTT measurements can be perfo
 
 ## Notes
 * Your smartphone has to support the IEEE 802.11mc standard by hardware. (e.g. has Qualcomm Snapdragon 820 CPU)
-* Your Access Point used for RTT ranging support the IEEE 802.11mc standard.
+* Your Access Point used for RTT ranging has to support the IEEE 802.11mc standard as well. Unfortunately I don't know any public available hardware up to now.
