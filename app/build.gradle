@@ -1,28 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 'android-P'
+    compileSdkVersion 28
     defaultConfig {
         applicationId "de.plinzen.android.rttmanager"
-        minSdkVersion 'P'
-        targetSdkVersion 'P'
+        minSdkVersion 28
+        targetSdkVersion 28
         versionCode 100
         versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
-    signingConfigs {
-        development {
-            storeFile file("../development.jks")
-            storePassword "development"
-            keyAlias "development"
-            keyPassword "development"
-        }
-    }
     buildTypes {
-        debug {
-            signingConfig signingConfigs.development
-        }
-
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'

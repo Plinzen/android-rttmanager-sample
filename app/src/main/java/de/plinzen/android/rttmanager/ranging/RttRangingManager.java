@@ -10,6 +10,7 @@ import android.net.wifi.rtt.WifiRttManager;
 import android.support.annotation.NonNull;
 
 import java.util.List;
+import java.util.concurrent.Executor;
 
 import io.reactivex.Single;
 
@@ -41,7 +42,7 @@ class RttRangingManager {
                     emitter.onSuccess(list);
                 }
             };
-            rttManager.startRanging(request, callback, null);
+            rttManager.startRanging(request, (Executor)callback, null);
         });
     }
 

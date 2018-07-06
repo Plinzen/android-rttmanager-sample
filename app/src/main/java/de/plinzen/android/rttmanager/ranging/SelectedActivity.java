@@ -59,7 +59,7 @@ public class SelectedActivity extends AppCompatActivity {
     }
 
     private String buildLogString(final RangingResult result) {
-        String resultString = getString(R.string.log, result.getRangingTimestampUs(), result.getRssi(), result
+        String resultString = getString(R.string.log, result.getRangingTimestampMillis(), result.getRssi(), result
                 .getDistanceMm(), logView.getText()
                 .toString());
         if (resultString.length() > 5000) {
@@ -118,7 +118,7 @@ public class SelectedActivity extends AppCompatActivity {
         }
         for (RangingResult res : result) {
             logView.setText(buildLogString(res));
-            Timber.d("Result: %d RSSI: %d Distance: %d mm", res.getRangingTimestampUs(), res.getRssi(), res
+            Timber.d("Result: %d RSSI: %d Distance: %d mm", res.getRangingTimestampMillis(), res.getRssi(), res
                     .getDistanceMm());
         }
     }
