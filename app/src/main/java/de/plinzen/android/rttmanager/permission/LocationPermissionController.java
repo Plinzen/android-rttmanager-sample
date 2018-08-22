@@ -18,7 +18,8 @@ public class LocationPermissionController {
 
     public boolean checkLocationPermissions(final Context context) {
         return ContextCompat.checkSelfPermission(context, Manifest.permission.ACCESS_COARSE_LOCATION) ==
-                PackageManager.PERMISSION_GRANTED;
+                PackageManager.PERMISSION_GRANTED && ContextCompat.checkSelfPermission(context, Manifest.permission
+                .ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED;
     }
 
     public boolean onRequestPermissionsResult(final int requestCode, @NonNull final String[] permissions,
@@ -30,7 +31,9 @@ public class LocationPermissionController {
     }
 
     public void requestLocationPermission(final Activity activity, final View snackbarContainer) {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(activity, Manifest.permission.ACCESS_COARSE_LOCATION)) {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(activity, Manifest.permission.ACCESS_COARSE_LOCATION) ||
+                ActivityCompat.shouldShowRequestPermissionRationale(activity, Manifest.permission
+                        .ACCESS_FINE_LOCATION)) {
             Snackbar.make(snackbarContainer, R.string.permission_location_description, Snackbar.LENGTH_INDEFINITE)
                     .setAction(android.R.string.ok, view -> requestPermissions(activity)).show();
         } else {
@@ -40,7 +43,8 @@ public class LocationPermissionController {
 
     private void requestPermissions(final Activity activity) {
         ActivityCompat.requestPermissions(activity,
-                new String[]{Manifest.permission.ACCESS_COARSE_LOCATION}, REQUEST_LOCATION_PERMISSION);
+                new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION},
+                REQUEST_LOCATION_PERMISSION);
     }
 
     private boolean verifyPermissions(int[] grantResults) {

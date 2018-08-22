@@ -17,11 +17,13 @@ import io.reactivex.Single;
 
 class RttRangingManager {
 
+    private final Executor mainExecutor;
     private final WifiRttManager rttManager;
 
     @SuppressLint("WrongConstant")
     RttRangingManager(final Context context) {
         rttManager = (WifiRttManager) context.getSystemService(Context.WIFI_RTT_RANGING_SERVICE);
+        mainExecutor = context.getMainExecutor();
     }
 
 
@@ -42,7 +44,7 @@ class RttRangingManager {
                     emitter.onSuccess(list);
                 }
             };
-            rttManager.startRanging(request, (Executor)callback, null);
+            rttManager.startRanging(request, mainExecutor, callback);
         });
     }
 
